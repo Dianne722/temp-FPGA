@@ -1,0 +1,26 @@
+
+State Machine - |top|state1
+Name state1.00000001 
+state1.00000000 0 
+state1.00000001 1 
+
+State Machine - |top|state
+Name state.00000001 
+state.00000000 0 
+state.00000001 1 
+
+State Machine - |top|FSM_KEY1:inst_FSM_KEY1|state_c
+Name state_c.UP state_c.HOLD state_c.DOWN state_c.IDLE 
+state_c.IDLE 0 0 0 0 
+state_c.DOWN 0 0 1 1 
+state_c.HOLD 0 1 0 1 
+state_c.UP 1 0 0 1 
+
+State Machine - |top|ds18b20_driver:inst_ds18b20_driver|state_c
+Name state_c.RD state_c.RDCM state_c.WAIT state_c.CT state_c.SKIP state_c.INIT 
+state_c.INIT 0 0 0 0 0 0 
+state_c.SKIP 0 0 0 0 1 1 
+state_c.CT 0 0 0 1 0 1 
+state_c.WAIT 0 0 1 0 0 1 
+state_c.RDCM 0 1 0 0 0 1 
+state_c.RD 1 0 0 0 0 1 
